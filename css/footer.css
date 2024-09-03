@@ -1,0 +1,47 @@
+footer {
+    background-color: #545454;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-footer img {
+    width: 400px;
+    /* Adjust the size of the logo */
+    margin-bottom: 10px;
+    color: red;
+
+}
+
+.follow-me p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.copyright p {
+    margin: 0;
+}

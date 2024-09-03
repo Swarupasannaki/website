@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+.home-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(202, 240, 255));
+  }
+  
+  .home-info .small-text {
+    font-size: 1.2em;
+    color: #555;
+  }
+
+  .home-info .big-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  .img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+  }
+
+
+  .img-fluid {
+    max-width: 50%;
+    margin-left: 70px;
+    /* height: 100%; */
+    /* height: 650px; */
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .home-info, .img-div {
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation */
+.animate-text {
+  animation: fadeInUp 1s ease-out;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes deleting {
+  from { width: 100%; }
+  to { width: 0; }
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #000; /* Cursor style */
+  animation: typing 4s steps(40, end), deleting 2s steps(40, end) 4s infinite;
+}
+
+/* To avoid a flicker */
+.typewriter::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+.gradient-text {
+  background: linear-gradient(45deg, rgb(255, 132, 0), #4ec7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+.cv {
+  background: linear-gradient(45deg, #00f, #00aaff);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.8s ease;
+  margin-top: 20px;
+}
+
+.cv:hover {
+  background: linear-gradient(45deg, #00aaff, #0077cc);
+}
+
+.gradient-text2 {
+  background: linear-gradient(45deg, rgb(0, 30, 110), #80e6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-media-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.social-icon.facebook { background-color: #0044d6; }
+.social-icon.twitter { background-color: #07a0ff; }
+.social-icon.instagram { background-color: #ff1919; }
+.social-icon.linkedin { background-color: #00486e; }
+
+
+.social-network {
+  list-style-type: none; /* Removes bullets from the list */
+  padding: 0;
+  margin-top: 15px;
+  display: flex;
+  gap: 15px; /* Space between the icons */
+}
+
+.social-network a {
+  display: inline-block;
+  position: relative;
+  margin:0px 5px 0px 5px;
+  width: 48px;
+  height: 48px; /* Ensures all icons are the same size */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-network a img {
+  width: 80%;
+  height: 80%;
+}
+
+.social-network a:hover {
+  transform: scale(1.2); /* Enlarge the icon on hover */
+  z-index: 10; /* Bring the hovered icon to the front */
+}
+
+
+
+@media (max-width: 767.98px) {
+  .mobile-margin {
+    margin-top: 100px;
+  }
+}

@@ -1,0 +1,131 @@
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    transition: background-color 0.3s, margin 0.3s;
+    margin: 10px;
+    /* Initial margin */
+}
+
+.skill-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.progress-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.circular-chart {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke: #00bcd4;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+@keyframes progress {
+    from {
+        stroke-dasharray: 0, 100;
+    }
+
+    to {
+        stroke-dasharray: var(--dasharray), 100;
+    }
+}
+
+.circle {
+    animation: progress 1s ease-out forwards;
+}
+
+.skill-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-card:hover {
+    background-color: #d3d3d3;
+    margin: 20px;
+    /* Increased margin on hover */
+}
+
+.skill-text {
+    font-weight: 500;
+    text-align: center;
+    /* Centers content inside the div */
+    text-underline-offset: solid red 2px;
+}
+
+.display-3 {
+    font-size: 2.5em;
+    /* Adjust font size if needed */
+}
+
+
+
+@keyframes slide-in-up {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.skill-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px #0000001a;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    transition: background-color 0.3s, margin 0.3s;
+    margin: 10px;
+    /* Initial margin */
+    opacity: 0; /* Hidden initially */
+    transform: translateY(20px); /* Start from below */
+    animation: none; /* Default state without animation */
+}
+
+.skill-card.visible {
+    animation: slide-in-up 0.9s ease-out forwards;
+}
